@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>destination</title>
+  </head>
+  <body>
+    <form action="">
+      <table
+        border="1"
+        cellpadding="10"
+        cellspacing="5"
+        align="center"
+        width="60%"
+      >
+        <tr>
+          <td>
+            <label for="source">sorce</label><br />
+            <input type="text" name="source" id="source" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="destination">destination</label><br />
+            <input type="text" name="destination" id="destination" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="journey_date">date</label><br />
+            <input type="date" name="journey_date" id="journey_date" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="seats">seats</label><br />
+            <select name="seats" id="seats">
+              <option value="1">1st seat</option>
+              <option value="2">2nd seat</option>
+              <option value="3">3rd seat</option>
+              <option value="4">4th seat</option>
+              <option value="5">5th seat</option>
+              <option value="6">6th seat</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">bus type</label><br />
+            <label for="express">
+              <input
+                type="checkbox"
+                name="express"
+                id="express"
+                value="1"
+              />express-1800
+            </label>
+            <label for="ac">
+              <input type="checkbox" name="ac" id="ac" value="2" />ac
+            </label>
+            <label for="volvo">
+              <input type="checkbox" name="volvo" id="volvo" value="3" />volvo
+            </label>
+            <label for="sleeper">
+              <input
+                type="checkbox"
+                name="sleeper"
+                id="sleeper"
+                value="4"
+              />sleeper
+            </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="">select gender</label><br />
+            <label for="male">
+              <input type="radio" name="gender" id="male" value="1" />male
+            </label>
+            <label for="female">
+              <input type="radio" name="gender" id="female" value="2" />female
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="search" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
