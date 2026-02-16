@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datalist tag</title>
+</head>
+<body>
+    <form action="success.html">
+        <table border="1" cellpadding="10" width="80%" align="center" cellspacing="5" >
+            <tr>
+                <td>
+                    <label for="source">source</label>
+                    <input type="text" id="source" name="source" required list="cities">
+                </td>
+                <td>
+                    <label for="destination">destination</label>
+                    <input type="text" id="destination" name="destination" required list="cities">
+                </td>
+                <td>
+                    <label for="journey_date">journey_date:</label>
+                    <input type="date" id="journey_date" name="journey_date">
+                </td>
+                <td>
+                    <label for="bustype">select:bus_type</label>
+                    <label for="volvo">
+                        <input type="radio" id="volvo" >volvo
+                    </label>
+                    <label for="AC">
+                        <input type="radio" id="AC">AC
+                    </label>
+                    <label for="NON-AC">
+                        <input type="radio" id="NON-AC">NON-AC
+                    </label>
+                    <label for="express">
+                        <input type="radio" id="express">express
+                    </label>
+                </td>
+                <td>
+                    <select>
+                        <option value="">select seat</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="submit">submit</button>
+                    <button type="reset">clear all</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    <datalist id="cities">
+        <option value="bhavnagar">
+        <option value="ahemdabad">
+        <option value="rajkot">
+        <option value="surat">
+        <option value="surendranagar">
+        <option value="jamnagar">
+        <option value="botad">
+        <option value="baroda">
+        <option value="diu">
+        <option value="daman">
+        <option value="mumbai">
+        <option value="vapi">
+        <option value="navsari">
+        <option value="bharuch">
+        <option value="nagpur">
+        <option value="kashi">
+        <option value="raipur">
+        <option value="manali">
+        <option value="salangpur">
+        <option value="jaipur">
+        <option value="udaipur">
+        <option value="dwarka">
+        <option value="jaisalmair">
+        <option value="banaskatha">
+        <option value="punjab">
+        <option value="hariyana">
+        <option value="aasam">
+        <option value="kutch">
+        <option value="amreli">
+        <option value="junagadh">
+        <option value="pune">
+        <option value="rajula">
+        <option value="dhola">
+        <option value="dhasa">
+        <option value="dhandhuka">
+        <option value="dholka">
+        <option value="bavla">
+        <option value="nesda">
+        <option value="mahuva">
+        <option value="talaja">
+        
+    </datalist>
+</body>
+</html>
