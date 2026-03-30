@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+.board{
+    background-color: aliceblue;
+    padding: 10px;
+    border: 2px solid black;
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    margin-bottom:10px;
+}
+.right{
+    justify-content: right;
+}
+.center {
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around
+{
+    justify-content: space-around;
+}
+.box{
+    border: 1px solid black;
+    width: 10%;
+    font-size: 20px;
+    padding: 10px;
+    background-color: bisque;
+    text-align: center;
+}
