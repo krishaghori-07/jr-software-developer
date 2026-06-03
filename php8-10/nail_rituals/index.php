@@ -204,24 +204,38 @@ if(isset($_POST['feedback']))
    </div>
    <h2 class="section-title">Customer Reviews</h2>
    <div class="row g-4">
-    <div class="col-md-4">
-        <div class="review">
-            <h5>Priya Patel</h5>
-            <p>Amazing nail art and service.</p>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="review">
-            <h5>Riya shah</h5>
-            <p>Professional staff and beautiful designs</p>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="review">
-            <h5>Vishwa Khasiya</h5>
-            <p>Best nail extension studio.</p>
-        </div>
-    </div>
+    <?php
+    $query="SELECT * FROM feedbacks ORDER BY id DESC";
+    $data=mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($data))
+    {
+        ?>
+        <div class="col-md-4">
+            <div class="review">
+                <h5>
+                    <?php
+                    echo $row['name'];
+                    ?>
+                    <span style="color:gold;">
+                        <?php
+                        for($i=1; $i<=$row['rating']; $i++)
+                        {
+                            echo'<i class="bi bi-star-fill"></i>';
+                        }
+                        ?>
+                    </span>
+                </h5>
+                <p>
+                    <?php
+                    echo $row['message'];?>
+                </p>
+            </div>
+             </div>
+            <?php
+    }
+    ?>
+       
+    
    </div>
 </div>
 <h2 class="section-title">Feedback Form</h2>
