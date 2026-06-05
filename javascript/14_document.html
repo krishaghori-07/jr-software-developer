@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>using document.write method</h1>
+    <button type="button" onclick="printtable();">Genrate multiplication table</button>
+   <script>
+     //create user define function
+     function printtable(){
+        console.log('printtable function is called........');
+       // 5 * 1 = 5
+       // .........
+        //.........
+        //5 * 10 =50
+        var num=prompt("enter one number:",1);
+        num=parseInt(num);
+        var multiplier=1;
+        var result=0;
+
+        while(multiplier<=10)
+     {
+        result=num*multiplier;
+        document.write(`${num} * ${multiplier} = ${result} <br/>`);
+        multiplier=multiplier+1;
+     }
+
+     }
+   </script>
+
+</body>
+</html>
