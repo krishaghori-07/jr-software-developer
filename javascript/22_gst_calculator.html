@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>
+        gst calculator
+    </h1>
+    <script>
+        "use strict";
+        const gst_rate=18;
+        function calculategst(amount)
+        {
+            return amount*gst_rate/100;
+        }
+        //take input from user
+        const amount=Number(prompt("enter amount:"));
+        //calculategst
+        const gst=calculategst(amount);
+        const total=amount+gst;
+        //display output
+        document.write(`<h2> Amount:${amount}</h2>`);
+        document.write(`<h2>Gst:${gst}</h2>`);
+        document.write(`<h2>Total:${total}</h2>`);
+
+        console.log(`Amount:${amount}`);
+        console.log(`GST:${gst}`);
+        console.log(`Total:${total}`);
+
+
+    </script>
+</body>
+</html>
