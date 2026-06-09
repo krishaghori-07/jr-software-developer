@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Arial;
+            text-align:center;
+            background-color:white;
+            margin-top:50px;
+        }
+        .box{
+            background:white;
+            padding:30px;
+            width:300px;
+            margin:auto;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+        h1
+        {
+            margin-bottom:20px;
+        }
+        button{
+            padding:10px 15px;
+            margin:auto;
+            font-size:16px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>mala jap counter</h1>
+        <div>chant count:</div>
+        <div class="count" id="count">0</div>
+
+        <div>rounds(108):</div>
+        <div class="count" id="round">0</div>
+
+        <button onclick="increase()">+count</button>
+        <button onclick="reset()">reset</button>
+    </div>
+    <script>
+        let count=0;
+        let round=0;
+        function increase(){
+            count++;
+            //every 108 count=1 round
+            if(count%108===0)
+        {
+                round++;
+        }
+        document.getElementById("count").innerHTML=count;
+        document.getElementById("round").innerHTML=round;
+        }''
+        function reset(){
+            count=0;
+            round=0;
+            document.getElementById("count").innerHTML=count;
+            document.getElementById("round").innerHTML=round;
+        }
+        
+
+    </script>
+</body>
+</html>

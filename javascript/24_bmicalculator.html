@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>default argument</h1>
+    <script>
+        function getvolume(length,width=1,depth=1)
+        {
+            console.log(length,width,depth);
+            let temp=length*width*depth;
+            return temp;
+        }
+        var length=10;
+        var width=5;
+        var depth=2;
+        let volume=getvolume(length,width,depth);
+        console.log("volume"+volume);
+        //2nd call
+        volume=getvolume("volume"+volume);
+        console.log("volume"+volume);
+        //3rd call
+          volume=getvolume("volume"+volume);
+        console.log("volume"+volume);
+    </script>
+</body>
+</html>
