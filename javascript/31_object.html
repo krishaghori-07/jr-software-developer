@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bg-light shadow">
+                <h1>create object</h1>
+            </div>
+            <div class="col-12 bg-light shadow">
+                <form onsubmit="return addplayer();" >
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                        <div class="invalid-feedback">Name is required</div>
+                    </div>
+                     <div class="mb-3">
+                        <label for="runs" class="form-label">Runs</label>
+                        <input type="number" id="runs" name="runs" min="0" step="1" class="form-control" required>
+                        <div class="invalid-feedback">Enter runs(0 or more)</div>
+                    </div>
+                     <div class="mb-3">
+                        <label for="balls" class="form-label">Balls</label>
+                        <input type="number" id="balls" name="balls" min="1" step="1" class="form-control" required>
+                        <div class="invalid-feedback">Enter balls faced (at least 1)</div>
+                    </div>
+                     <div class="mb-3">
+                        <label for="fours" class="form-label">Fours</label>
+                        <input type="number" id="fours" name="fours" class="form-control" min="0" step="1" required>
+                        <div class="invalid-feedback">Enter nmber of fours(0 or more)</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="six" class="form-label">Six</label>
+                        <input type="number" id="six" name="six" min="0" step="1" class="form-control" required>
+                        <div class="invalid-feedback">Name is required</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-lg-10 p-3">
+                <div class="row" id="team">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        function addplayer(){
+            //create variables to store input
+            var name=document.getElementById('name').value;
+            var runs=document.getElementById('runs').value;
+            var balls=document.getElementById('balls').value;
+            var fours=document.getElementById('fours').value;
+            var six=document.getElementById('six').value;
+            //now create object using class
+            //var object = new class(values)
+            var p1 = new player(name,runs,balls,fours,six);
+            p1.add();
+            return false;
+        }
+        class player{
+            //create property variable inside constructor
+            constructor(name,runs,ball,four,six){
+                this.name=name;
+                this.runs=runs;
+                this.ball=ball;
+                this.four=four;
+                this.six=six;
+            }
+            add()
+            {
+                console.log(this);
+                let card=`<div class="col-lg-3 mb-3">
+                        <div class="card shadow">
+                            <div class="card-header text-bg-primary d-flex justify-content-between">
+                                <h4>${this.name}</h4>
+                                <div>
+                                    <i class="fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-grop list-group-flush">
+                                    <li class="list-group-item"><b>Runs</b>${this.runs}</li>
+                                    <li class="list-group-item"><b>Ball</b>${this.ball}</li>
+                                    <li class="list-group-item"><b>Fours</b>${this.four}</li>
+                                    <li class="list-group-item"><b>Six</b>${this.six}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>`;
+                    document.getElementById('team').innerHTML += card;
+            }
+        }
+    </script>
+</body>
+</html>
